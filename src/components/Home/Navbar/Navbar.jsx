@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Navbar = ({cartData}) => {
-
+  const totalPrice = cartData.reduce((sum, current) => sum + current.price, 0)
   const [active, setActive]=useState('')
 
   return (
@@ -93,8 +93,8 @@ const Navbar = ({cartData}) => {
             className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow"
           >
             <div className="card-body">
-              <span className="text-lg font-bold">8 Items</span>
-              <span className="text-info">Subtotal: $999</span>
+              <span className="text-lg font-bold">{cartData.length} Items</span>
+              <span className="text-info">Subtotal: ${totalPrice.toFixed(2)}</span>
               <div className="card-actions">
                 <button className="btn btn-primary btn-block">View cart</button>
               </div>

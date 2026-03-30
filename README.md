@@ -1,16 +1,44 @@
-# React + Vite
+# 🛒 Digital Tools Hub - Digital Tools Buying Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully responsive e-commerce website for buying digital tools and productivity resources. Built as part of the **A-6 Assignment**.
 
-Currently, two official plugins are available:
+![Project Banner](https://i.ibb.co.com/F18LZqH/screencapture-programing-assignment-6-vercel-app-2026-03-30-20-12-17.png)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## 📝 Project Description
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Digital Tools Hub** is a sleek single-page React application that allows users to browse, view, and add various digital tools (resume builders, design tools, productivity software, etc.) to their cart. 
 
-## Expanding the ESLint configuration
+The website features a clean UI with smooth toggling between **Products** and **Cart** sections, fully functional cart management, and beautiful product cards with tags like Popular, New, and Best Seller.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+- **React.js** (Functional Components + Hooks)
+- **Tailwind CSS** + **DaisyUI**
+- **JavaScript (ES6+)**
+- **React-Toastify** (for beautiful toast notifications)
+- **JSON** (for product data management)
+
+## ✨ Key Features
+
+- **Fully Responsive Design** – Works perfectly on mobile, tablet, and desktop
+- **Dynamic Navbar** with Cart icon showing real-time item count
+- **Interactive Banner** with attractive heading, description, and CTA buttons
+- **Stats Section** highlighting key numbers
+- **Toggle between Products & Cart** using two central buttons
+- **Beautiful Product Cards** in 3-column grid (with icon, name, price, period, tag, features list, and Buy Now button)
+- **Fully Functional Cart** – Add, Remove, and Proceed to Checkout
+- **Toast Notifications** using React-Toastify for Add to Cart, Remove, and Checkout
+- **Steps Section** and **Pricing Section** as per design
+- **Professional Footer**
+
+### Bonus/Optional Features Implemented
+- Real-time cart count update in Navbar
+- "Added to Cart" temporary message on Buy Now button
+- Smooth remove functionality from cart
+- Total items and clean checkout (clears cart)
+
+## 🚀 Live Demo
+
+[🔗 View Live Site](https://programing-assignment-6.vercel.app/)  
+
