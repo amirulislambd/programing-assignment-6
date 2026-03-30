@@ -7,6 +7,8 @@ import Products from "./components/Home/Products/Products";
 import { useState } from "react";
 import Cart from "./components/Home/Cart/Cart";
 import Steps from "./components/Home/Steps/Steps";
+import Product from "./components/Home/Product/Product";
+import Pricing from "./components/Home/Pricing/Pricing";
 
 const productsFetch = async () => {
   const res = await fetch("/productData.json");
@@ -38,6 +40,7 @@ function App() {
         <Cart cartData={cartData} setCartData={setCartData} />
       )}
       <Steps/>
+      <Pricing/>
     </>
   );
 }

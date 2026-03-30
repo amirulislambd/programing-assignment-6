@@ -24,14 +24,14 @@ const Cart = ({ cartData, setCartData }) => {
   };
 
   return (
-    <div>
+    <div className="container lg:max-w-7xl mx-auto">
       {cartData.length === 0 ? (
         <div className="flex flex-col items-center justify-center  py-20 bg-white border rounded-xl border-zinc-200">
           <MdShoppingCart className="w-20 h-20 animate-pulse" />
           <p className="text-xl font-bold text-zinc-400">Empty your cart</p>
         </div>
       ) : (
-        <div className="space-y-2 container lg:max-w-7xl mx-auto">
+        <div className="space-y-2 ">
           {cartData.map((item) => (
             <div className="flex justify-between items-center border border-zinc-200 rounded-xl p-2 md:p-3">
               <div className="flex gap-2 items-center">
@@ -55,7 +55,7 @@ const Cart = ({ cartData, setCartData }) => {
           ))}
           <h2 className="flex items-center justify-between">
             <span className="text-xl  text-zinc-500">Total:</span>
-            <span className="text-2xl font-bold">${totalPrice}</span>
+            <span className="text-2xl font-bold">${totalPrice.toFixed(2)}</span>
           </h2>
           <button
             onClick={handlePayment}
