@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div className='md:flex items-center justify-between md:container gap-5 lg:max-w-7xl mx-auto  my-4 md:my-8'>
       <div className="max-w-[500px] flex flex-col items-center md:items-start md:space-y-5 lg:space-y-6">
-        <p className="inline-flex items-center text-lg gap-1 md:p-1 rounded-full bg-linear-to-r from-[#4F39F6]/20 to-[#9514FA]/20 ">
+        <p className="inline-flex items-center text-lg gap-1 px-2 md:p-1 rounded-full bg-linear-to-r from-[#4F39F6]/20 to-[#9514FA]/20 ">
           <span className="text-[#4F39F6]">
             <RiFocus2Fill />
           </span>

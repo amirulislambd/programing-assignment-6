@@ -3,7 +3,7 @@ import { GiCheckMark } from "react-icons/gi";
 
 const Pricing = () => {
   return (
-    <div className=" bg-white border-t border-zinc-100 rounded-xl shadow-2xl p-5">
+    <div className=" bg-white border-t border-zinc-200  my-20   rounded-xl  p-5 ">
         <div className="text-center my-6 md:my-8 lg:my-12 space-y-2">
         <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold ">Simple, Transparent Pricing</h2>
     <p className="text-zinc-500">Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
