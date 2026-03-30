@@ -65,7 +65,7 @@ const Navbar = ({cartData}) => {
 
       </div>
       <div className="flex items-center gap-2">
-        <div className="dropdown dropdown-end">
+        <div className="dropdown dropdown-right md:dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">
               <svg
