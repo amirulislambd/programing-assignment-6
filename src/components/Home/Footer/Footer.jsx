@@ -36,11 +36,11 @@ const Footer = () => {
           <nav>
             <h6 className="footer-title">Social Links</h6>
             <div className="flex gap-2">
-            <a href=""><AiFillInstagram  className="text-3xl p-1 bg-white rounded-full text-black" /></a>
-            <a href="https://www.facebook.com/profile.php?id=61583826647447">         <FaFacebookSquare className="text-3xl p-1 bg-white rounded-full text-black" />
+            <a href=""><AiFillInstagram  className="text-3xl p-1 bg-white rounded-full text-black transition-all duration-500 ease-in-out hover:scale-125 hover:shadow-2xl hover:bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:text-white" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61583826647447">         <FaFacebookSquare className="text-3xl p-1 bg-white rounded-full text-black transition-all duration-500 ease-in-out hover:scale-125 hover:shadow-2xl hover:bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:text-white" />
             </a>
             <a href="https://x.com/amirislambd313">
-            <BsTwitterX className="text-3xl p-1 bg-white rounded-full text-black" />
+            <BsTwitterX className="text-3xl p-1 bg-white rounded-full text-black transition-all duration-500 ease-in-out hover:scale-125 hover:shadow-2xl hover:bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:text-white" />
             </a>
             </div>
           </nav>

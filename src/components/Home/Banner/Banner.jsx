@@ -3,10 +3,10 @@ import { RiFocus2Fill } from "react-icons/ri";
 
 const Banner = () => {
   return (
-    <div className='md:flex items-center justify-between md:container gap-5 lg:max-w-7xl mx-auto  my-4 md:my-8'>
+    <div className='grid md:grid-cols-2 items-center justify-center container lg:max-w-7xl mx-auto py-4 md:py-5 lg:py-7 px-4 md:px-6 lg:px-8'>
       <div className="max-w-[500px] flex flex-col items-center md:items-start md:space-y-5 lg:space-y-6">
-        <p className="inline-flex items-center text-lg gap-1 px-2 md:p-1 rounded-full bg-linear-to-r from-[#4F39F6]/20 to-[#9514FA]/20 ">
-          <span className="text-[#4F39F6]">
+        <p className="inline-flex items-center text-lg gap-2 px-4 p-1 rounded-full bg-linear-to-r from-[#4F39F6]/20 to-[#9514FA]/20 text-sm">
+          <span className="text-[#4F39F6] animate-ping text-xs ">
             <RiFocus2Fill />
           </span>
           <span className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">

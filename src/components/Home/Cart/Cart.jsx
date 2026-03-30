@@ -11,7 +11,7 @@ const Cart = ({ cartData, setCartData }) => {
     );
     if (filteredData) {
       setCartData(filteredData);
-      toast.error(`${item.name} Item removed from cart.🗑️`,{
+      toast.info(`${item.name} removed from cart.🗑️`,{
         position:"top-center"
       })
     }
@@ -24,7 +24,9 @@ const Cart = ({ cartData, setCartData }) => {
   };
 
   return (
-    <div className="container lg:max-w-7xl mx-auto">
+    <div className="container lg:max-w-7xl mx-auto mb-10 md:mb-20 ">
+     <div className="px-4">
+     <h2 className="text-2xl md:text-4xl font-bold text-center mb-4">Your Cart</h2>
       {cartData.length === 0 ? (
         <div className="flex flex-col items-center justify-center  py-20 bg-white border rounded-xl border-zinc-200">
           <MdShoppingCart className="w-20 h-20 animate-pulse" />
@@ -65,6 +67,7 @@ const Cart = ({ cartData, setCartData }) => {
           </button>
         </div>
       )}
+     </div>
     </div>
   );
 };

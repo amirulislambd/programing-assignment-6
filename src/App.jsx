@@ -23,7 +23,6 @@ function App() {
 
 
   const productRef =useRef(null)
-  const cartRef =useRef(null)
 
 
 const scrollToProducts =()=>{
@@ -42,20 +41,6 @@ const scrollToProducts =()=>{
 }
 
 
-const scrollToCart = () => {
- setTimeout(()=>{
-  if(cartRef.current){
-    const headerOffset = 206.5
-    const elementPosition =cartRef.current.getBoundingClientRect().top
-    console.log(elementPosition)
-    const offsetPosition = elementPosition+window.scrollY-headerOffset
-    window.scrollTo({
-      top:offsetPosition,
-      behavior:'smooth'
-    })
-  }
- },80)
-};
 
   return (
     <>
@@ -68,7 +53,6 @@ const scrollToCart = () => {
         active={active}
         setActive={setActive}
         scrollToProducts={scrollToProducts}
-        scrollToCart={scrollToCart}
       />
       <div ref={productRef}>
         {
@@ -79,15 +63,19 @@ const scrollToCart = () => {
         />
         }
       </div>
-      <div ref={cartRef}>
         {
           active === 'cart' &&  <Cart cartData={cartData} setCartData={setCartData} />
         }
-      </div>
-      <Steps/>
-      <Pricing/>
-      <Transform/>
-      <Footer/>
+      
+      {
+        active==='active' && <div>
+
+          <Steps/>
+          <Pricing/>
+          <Transform/>
+          <Footer/>
+        </div>
+      }
     </>
   );
 }
