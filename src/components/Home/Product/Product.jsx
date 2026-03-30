@@ -15,8 +15,8 @@ const Product = ({ item, cartData, setCartData }) => {
     } else {
       setCartData([...cartData, item]);
       setBtnText("add");
-      toast.success(`${item.name} Product successfully added to the cart 🛒`,{
-        position:"top-center"
+      toast.success(`${item.name} Product successfully added to the cart 🛒`, {
+        position: "top-center",
       });
     }
   };
@@ -47,7 +47,7 @@ const Product = ({ item, cartData, setCartData }) => {
       ))}
       <button
         onClick={() => handleAbbBtn(item)}
-        className={`btn w-full rounded-full ${btnText === "add" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : " btn-primary"}`}
+        className={`btn w-full rounded-full ${btnText === "add" ? "btn-primary" : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}
       >
         {btnText === "add" ? "added to cart" : "Buy Now"}
       </button>

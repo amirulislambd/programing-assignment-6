@@ -6,6 +6,7 @@ import ToggleBTN from "./components/Home/ToggleBTN/ToggleBTN";
 import Products from "./components/Home/Products/Products";
 import { useState } from "react";
 import Cart from "./components/Home/Cart/Cart";
+import Steps from "./components/Home/Steps/Steps";
 
 const productsFetch = async () => {
   const res = await fetch("/productData.json");
@@ -36,6 +37,7 @@ function App() {
       ) : (
         <Cart cartData={cartData} setCartData={setCartData} />
       )}
+      <Steps/>
     </>
   );
 }
