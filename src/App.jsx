@@ -4,21 +4,38 @@ import Navbar from "./components/Home/Navbar/Navbar";
 import Stats from "./components/Home/Stats/Stats";
 import ToggleBTN from "./components/Home/ToggleBTN/ToggleBTN";
 import Products from "./components/Home/Products/Products";
+import { useState } from "react";
+import Cart from "./components/Home/Cart/Cart";
 
-const productsFetch=async()=>{
-  const res = await fetch('/productData.json')
-  return res.json()
-}
-const promiseData=productsFetch()
+const productsFetch = async () => {
+  const res = await fetch("/productData.json");
+  return res.json();
+};
+const promiseData = productsFetch();
 function App() {
+  const [active, setActive] = useState("active");
+  const [cartData, setCartData] = useState([]);
 
   return (
     <>
-      <Navbar/>
-      <Banner/>
-      <Stats/>
-      <ToggleBTN promiseData={promiseData}/>
-      <Products promiseData={promiseData}/>
+      <Navbar cartData={cartData} />
+      <Banner />
+      <Stats />
+      <ToggleBTN
+        promiseData={promiseData}
+        cartData={cartData}
+        active={active}
+        setActive={setActive}
+      />
+      {active === "active" ? (
+        <Products
+          promiseData={promiseData}
+          cartData={cartData}
+          setCartData={setCartData}
+        />
+      ) : (
+        <Cart cartData={cartData} setCartData={setCartData} />
+      )}
     </>
   );
 }

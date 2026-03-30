@@ -86,5 +86,23 @@
     "tagType": "new",
     "features": ["Job application tracker", "AI resume tailoring", "Interview question prep", "Unlimited exports", "Team collaboration"],
     "icon": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+  },
+  {
+    "id": 9,
+    "name": "Freelance Portfolio Pro",
+    "description": "Professional portfolio builder for freelancers and creative professionals with stunning project showcase templates.",
+    "price": 19.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "50+ portfolio templates",
+      "Project showcase builder",
+      "Client testimonial section",
+      "Mobile responsive design",
+      "PDF & Web export",
+      "Custom domain support"
+    ],
+    "icon": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
   }
 ]

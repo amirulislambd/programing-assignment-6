@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({cartData}) => {
 
   const [active, setActive]=useState('')
 
   return (
-    <div className=" bg-base-100 shadow-sm sticky top-0 z-10 md:container lg:max-w-7xl mx-auto py-5">
+    <div className=" bg-base-100 shadow-sm sticky top-0 z-20 md:container lg:max-w-7xl mx-auto py-5">
       <div className="flex items-center justify-between">
       <div className="">
         <h2 className="hidden md:block text-5xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">DigiTools</h2>
@@ -83,7 +83,9 @@ const Navbar = () => {
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />{" "}
               </svg>
-              <span className="badge badge-xs indicator-item bg-red-500 w-3 text-white">8</span>
+             {
+              cartData.length === 0 ? null :  <span className="badge badge-xs indicator-item bg-red-500 w-3 text-white">{cartData.length}</span>
+             }
             </div>
           </div>
           <div
