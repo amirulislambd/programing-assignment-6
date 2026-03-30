@@ -5,7 +5,7 @@ const Navbar = () => {
   const [active, setActive]=useState('')
 
   return (
-    <div className=" bg-base-100 shadow-sm sticky top-0 md:container lg:max-w-7xl mx-auto py-5">
+    <div className=" bg-base-100 shadow-sm sticky top-0 z-10 md:container lg:max-w-7xl mx-auto py-5">
       <div className="flex items-center justify-between">
       <div className="">
         <h2 className="hidden md:block text-5xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">DigiTools</h2>
