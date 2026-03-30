@@ -3,7 +3,7 @@ import { GiCheckMark } from "react-icons/gi";
 import { toast } from "react-toastify";
 
 const Product = ({ item, cartData, setCartData }) => {
-  const [btnText, setBtnText] = useState("");
+  const isAlreadyInCart = cartData.some(cartItem=>cartItem.id===item.id)
   const handleAbbBtn = (item) => {
     const filterCar = cartData.find((cartItem) => cartItem.id === item.id);
     console.log(filterCar);
@@ -55,9 +55,13 @@ const Product = ({ item, cartData, setCartData }) => {
       </div>
       <button
         onClick={() => handleAbbBtn(item)}
-        className={`btn w-full rounded-full ${btnText === "add" ? " btn-primary " : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}
+        className={`btn w-full rounded-full ${isAlreadyInCart ? " btn-primary " : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}
       >
-        {btnText === "add" ? "added to cart" : "Buy Now"}
+        {
+          isAlreadyInCart ? "added to cart" :"Buy Now"
+        }
+
+        
       </button>
     </div>
   );

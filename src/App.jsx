@@ -4,7 +4,7 @@ import Navbar from "./components/Home/Navbar/Navbar";
 import Stats from "./components/Home/Stats/Stats";
 import ToggleBTN from "./components/Home/ToggleBTN/ToggleBTN";
 import Products from "./components/Home/Products/Products";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Cart from "./components/Home/Cart/Cart";
 import Steps from "./components/Home/Steps/Steps";
 import Product from "./components/Home/Product/Product";
@@ -21,6 +21,42 @@ function App() {
   const [active, setActive] = useState("active");
   const [cartData, setCartData] = useState([]);
 
+
+  const productRef =useRef(null)
+  const cartRef =useRef(null)
+
+
+const scrollToProducts =()=>{
+  setTimeout(()=>{
+    if(productRef.current){
+      const headerOffset = 220
+      const elementPosition =productRef.current.getBoundingClientRect().top
+      console.log(elementPosition)
+      const offsetPosition = elementPosition+window.scrollY-headerOffset
+      window.scrollTo({
+        top:offsetPosition,
+        behavior:'smooth'
+      })
+    }
+   },80)
+}
+
+
+const scrollToCart = () => {
+ setTimeout(()=>{
+  if(cartRef.current){
+    const headerOffset = 206.5
+    const elementPosition =cartRef.current.getBoundingClientRect().top
+    console.log(elementPosition)
+    const offsetPosition = elementPosition+window.scrollY-headerOffset
+    window.scrollTo({
+      top:offsetPosition,
+      behavior:'smooth'
+    })
+  }
+ },80)
+};
+
   return (
     <>
       <Navbar cartData={cartData} />
@@ -31,16 +67,23 @@ function App() {
         cartData={cartData}
         active={active}
         setActive={setActive}
+        scrollToProducts={scrollToProducts}
+        scrollToCart={scrollToCart}
       />
-      {active === "active" ? (
-        <Products
+      <div ref={productRef}>
+        {
+          active==='active' &&  <Products
           promiseData={promiseData}
           cartData={cartData}
           setCartData={setCartData}
         />
-      ) : (
-        <Cart cartData={cartData} setCartData={setCartData} />
-      )}
+        }
+      </div>
+      <div ref={cartRef}>
+        {
+          active === 'cart' &&  <Cart cartData={cartData} setCartData={setCartData} />
+        }
+      </div>
       <Steps/>
       <Pricing/>
       <Transform/>
