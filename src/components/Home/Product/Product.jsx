@@ -14,7 +14,6 @@ const Product = ({ item, cartData, setCartData }) => {
       return;
     } else {
       setCartData([...cartData, item]);
-      setBtnText("add");
       toast.success(`${item.name} Product successfully added to the cart 🛒`, {
         position: "top-center",
       });
