@@ -8,14 +8,16 @@ const Product = ({ item, cartData, setCartData }) => {
     const filterCar = cartData.find((cartItem) => cartItem.id === item.id);
     console.log(filterCar);
     if (filterCar) {
-      toast.warning("This product is already in your cart.", {
+      toast.warning(`${item.name} already in your cart.`, {
         position: "top-center",
       });
       return;
     } else {
       setCartData([...cartData, item]);
       setBtnText("add");
-      toast.success("Product successfully added to the cart 🛒");
+      toast.success(`${item.name} Product successfully added to the cart 🛒`,{
+        position:"top-center"
+      });
     }
   };
   return (
